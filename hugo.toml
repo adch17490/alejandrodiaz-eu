@@ -1,0 +1,37 @@
+baseURL = "https://alejandrodiaz.eu/"
+languageCode = "es-es"
+title = "Alejandro Díaz"
+theme = "PaperMod"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  author = "Alejandro Díaz"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowCodeCopyButtons = true
+
+  [params.homeInfoParams]
+    Title = "Hola 👋"
+    Content = "Soy un profesional TIC apasionado por la innovación, las redes IT y la inteligencia artificial. Aquí puedes conocerme mejor."
+
+[[menu.main]]
+  name = "Sobre mí"
+  url = "/about/"
+  weight = 1
+
+[[menu.main]]
+  name = "Proyectos"
+  url = "/projects/"
+  weight = 2
+
+[[menu.main]]
+  name = "Contacto"
+  url = "/contact/"
+  weight = 3
+
+[[menu.main]]
+  name = "Blog"
+  url = "/posts/"
+  weight = 4
