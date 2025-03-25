@@ -41,10 +41,6 @@ theme = "PaperMod"
   url = "https://www.linkedin.com/in/alejandro-dch/"
 
 [[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/adch17490"
-
-[[params.socialIcons]]
   name = "email"
   url = "mailto:alexdiaz17490@gmail.com"
 
@@ -61,17 +57,9 @@ theme = "PaperMod"
   url = "https://www.instagram.com/adch17490/"
 
 [[params.socialIcons]]
-  name = "youtube"
-  url = "https://www.youtube.com/@alexdiaz17490"
-
-[[params.socialIcons]]
   name = "whatsapp"
   url = "https://wa.me/34615227582"
 
 [[params.socialIcons]]
   name = "telegram"
   url = "https://t.me/stsea90"
-
-[[params.socialIcons]]
-  name = "discord"
-  url = "adch17490"
