@@ -35,3 +35,43 @@ theme = "PaperMod"
   name = "Blog"
   url = "/posts/"
   weight = 4
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/alejandro-dch/"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/adch17490"
+
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:alexdiaz17490@gmail.com"
+
+[[params.socialIcons]]
+  name = "twitter"
+  url = "https://x.com/adch17490"
+
+[[params.socialIcons]]
+  name = "facebook"
+  url = "https://www.facebook.com/alexdiaz17490/"
+
+[[params.socialIcons]]
+  name = "instagram"
+  url = "https://www.instagram.com/adch17490/"
+
+[[params.socialIcons]]
+  name = "youtube"
+  url = "https://www.youtube.com/@alexdiaz17490"
+
+[[params.socialIcons]]
+  name = "whatsapp"
+  url = "https://wa.me/34615227582"
+
+[[params.socialIcons]]
+  name = "telegram"
+  url = "https://t.me/stsea90"
+
+[[params.socialIcons]]
+  name = "discord"
+  url = "adch17490"
