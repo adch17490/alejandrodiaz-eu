@@ -13,4 +13,4 @@ Además de lo profesional, disfruto cacharreando con sistemas domóticos, automa
 
 ---
 📍 Pamplona (Navarra) · ✉️ [alexdiaz17490@gmail.com](mailto:alexdiaz17490@gmail.com) · 🔗 [LinkedIn](https://www.linkedin.com/in/alejandro-dch/)
-📄 Puedes ver o descargar mi currículum aquí: [Descargar CV](CV_Alejandro_Diaz.pdf)
+📄 Puedes ver o descargar mi currículum aquí: [Descargar CV](/CV_Alejandro_Diaz.pdf)
