@@ -16,6 +16,8 @@ Uno de los puntos fuertes es su flexibilidad: lo tengo corriendo en una Raspberr
 Me permite automatizar cosas como:
 
 - Bajar las persianas si abro la ventana y hace frío
+- Parar el movimiento de las persianas por seguidad al abrir las ventanas
+- Subir la velocidad del recuperador si detecto subida rápida de la humedad en los baños (ducha)
 - Encender las luces según movimiento y luminosidad
 - Controlar la calefacción por suelo radiante según estancias y horarios
 
