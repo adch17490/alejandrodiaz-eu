@@ -1,10 +1,15 @@
 ---
 title: "Cómo controlo mi casa con Home Assistant"
 date: 2025-03-25
+disableShare: true
+ShowSocialIcons: false
 tags: ["domótica", "home assistant", "zigbee", "knx"]
+featured_image: /img/hass3d.png
 ---
 
 Desde hace un tiempo, uso Home Assistant como cerebro de mi casa inteligente. Es una plataforma de código abierto que centraliza todos mis dispositivos: luces, sensores, persianas, calefacción, seguridad…
+
+![Panel principal de Home Assistant](/img/hass3d.png)
 
 Uno de los puntos fuertes es su flexibilidad: lo tengo corriendo en una Raspberry Pi 4, con integración Zigbee, MQTT, y KNX.
 

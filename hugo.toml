@@ -8,13 +8,26 @@ theme = "PaperMod"
 
 [params]
   author = "Alejandro Díaz"
+  # …otros parámetros…
+  ShowPostNavLinks = true
   ShowReadingTime = true
   ShowShareButtons = true
   ShowCodeCopyButtons = true
+  ShowBreadCrumbs = true
+  ShowToc = true
 
   [params.homeInfoParams]
     Title = "Hola 👋"
     Content = "Soy un profesional TIC apasionado por la innovación, las redes IT y la inteligencia artificial. Aquí puedes conocerme mejor."
+
+  [params.assets]
+    disableFingerprinting = true
+
+  [params.featuredImage]
+    previewOnly = false
+
+  [params.list]
+  showFeaturedImage = true
 
 [[menu.main]]
   name = "Sobre mí"
