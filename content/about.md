@@ -1,6 +1,8 @@
 ---
 title: "Sobre mí"
 date: 2025-03-25
+disableShare: true
+ShowSocialIcons: false
 ---
 
 ¡Hola! 👋 Soy Alejandro Díaz, Ingeniero de Telecomunicación con más de 10 años de experiencia en el sector TIC.
