@@ -2,6 +2,66 @@ baseURL = "https://alejandrodiaz.eu/"
 languageCode = "es-es"
 title = "Alejandro Díaz"
 theme = "PaperMod"
+defaultContentLanguage = "es"
+defaultContentLanguageInSubdir = true
+
+[languages]
+
+[languages.es]
+  languageName = "Español"
+  weight = 1
+  contentDir = "content/es"
+  title = "Portfolio de Alejandro Díaz"
+  languageCode = "es-es"
+
+[languages.en]
+  languageName = "English"
+  weight = 2
+  contentDir = "content/en"
+  title = "Alejandro Díaz's Portfolio"
+  languageCode = "en-us"
+  
+[languages.es.menu]
+  [[languages.es.menu.main]]
+    name = "Sobre mí"
+    url = "/es/about/"
+    weight = 1
+
+  [[languages.es.menu.main]]
+    name = "Proyectos"
+    url = "/es/projects/"
+    weight = 2
+
+  [[languages.es.menu.main]]
+    name = "Contacto"
+    url = "/es/contact/"
+    weight = 3
+
+  [[languages.es.menu.main]]
+    name = "Blog"
+    url = "/es/posts/"
+    weight = 4
+
+[languages.en.menu]
+  [[languages.en.menu.main]]
+    name = "About me"
+    url = "/en/about/"
+    weight = 1
+
+  [[languages.en.menu.main]]
+    name = "Projects"
+    url = "/en/projects/"
+    weight = 2
+
+  [[languages.en.menu.main]]
+    name = "Contact"
+    url = "/en/contact/"
+    weight = 3
+
+  [[languages.en.menu.main]]
+    name = "Blog"
+    url = "/en/posts/"
+    weight = 4
 
 [pagination]
   pagerSize = 10
@@ -16,9 +76,9 @@ theme = "PaperMod"
   ShowBreadCrumbs = true
   ShowToc = true
 
-  [params.homeInfoParams]
-    Title = "Hola 👋"
-    Content = "Soy un profesional TIC apasionado por la innovación, las redes IT y la inteligencia artificial. Aquí puedes conocerme mejor."
+#  [params.homeInfoParams]
+#    Title = "Hola 👋"
+#    Content = "Soy un profesional TIC apasionado por la innovación, las redes IT y la inteligencia artificial. Aquí puedes conocerme mejor."
 
   [params.assets]
     disableFingerprinting = true
@@ -36,17 +96,17 @@ theme = "PaperMod"
 
 [[menu.main]]
   name = "Proyectos"
-  url = "/projects/"
+  url = "/es/projects/"
   weight = 2
 
 [[menu.main]]
   name = "Contacto"
-  url = "/contact/"
+  url = "/es/contact/"
   weight = 3
 
 [[menu.main]]
   name = "Blog"
-  url = "/posts/"
+  url = "/es/posts/"
   weight = 4
 
 [[params.socialIcons]]

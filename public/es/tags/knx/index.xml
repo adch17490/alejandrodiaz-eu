@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Knx on Portfolio de Alejandro Díaz</title>
+    <link>http://localhost:1313/es/tags/knx/</link>
+    <description>Recent content in Knx on Portfolio de Alejandro Díaz</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>es-es</language>
+    <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/tags/knx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cómo controlo mi casa con Home Assistant</title>
+      <link>http://localhost:1313/es/posts/como-controlo-mi-casa-con-home-assistant/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/posts/como-controlo-mi-casa-con-home-assistant/</guid>
+      <description>&lt;p&gt;Desde hace un tiempo, uso Home Assistant como cerebro de mi casa inteligente. Es una plataforma de código abierto que centraliza todos mis dispositivos: luces, sensores, persianas, calefacción, seguridad…&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Panel principal de Home Assistant&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/img/hass3d.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Uno de los puntos fuertes es su flexibilidad: lo tengo corriendo en una Raspberry Pi 4, con integración Zigbee, MQTT, y KNX.&lt;/p&gt;
+&lt;p&gt;Me permite automatizar cosas como:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bajar las persianas si abro la ventana y hace frío&lt;/li&gt;
+&lt;li&gt;Parar el movimiento de las persianas por seguidad al abrir las ventanas&lt;/li&gt;
+&lt;li&gt;Subir la velocidad del recuperador si detecto subida rápida de la humedad en los baños (ducha)&lt;/li&gt;
+&lt;li&gt;Encender las luces según movimiento y luminosidad&lt;/li&gt;
+&lt;li&gt;Controlar la calefacción por suelo radiante según estancias y horarios&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Además, el panel de control es totalmente personalizable, y estoy empezando a experimentar con dashboards tipo SCADA para visualizar todo en tiempo real.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

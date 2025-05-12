@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bienvenido on Portfolio de Alejandro Díaz</title>
+    <link>http://localhost:1313/es/</link>
+    <description>Recent content in Bienvenido on Portfolio de Alejandro Díaz</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>es-es</language>
+    <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cómo controlo mi casa con Home Assistant</title>
+      <link>http://localhost:1313/es/posts/como-controlo-mi-casa-con-home-assistant/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/posts/como-controlo-mi-casa-con-home-assistant/</guid>
+      <description>&lt;p&gt;Desde hace un tiempo, uso Home Assistant como cerebro de mi casa inteligente. Es una plataforma de código abierto que centraliza todos mis dispositivos: luces, sensores, persianas, calefacción, seguridad…&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Panel principal de Home Assistant&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/img/hass3d.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Uno de los puntos fuertes es su flexibilidad: lo tengo corriendo en una Raspberry Pi 4, con integración Zigbee, MQTT, y KNX.&lt;/p&gt;
+&lt;p&gt;Me permite automatizar cosas como:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bajar las persianas si abro la ventana y hace frío&lt;/li&gt;
+&lt;li&gt;Parar el movimiento de las persianas por seguidad al abrir las ventanas&lt;/li&gt;
+&lt;li&gt;Subir la velocidad del recuperador si detecto subida rápida de la humedad en los baños (ducha)&lt;/li&gt;
+&lt;li&gt;Encender las luces según movimiento y luminosidad&lt;/li&gt;
+&lt;li&gt;Controlar la calefacción por suelo radiante según estancias y horarios&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Además, el panel de control es totalmente personalizable, y estoy empezando a experimentar con dashboards tipo SCADA para visualizar todo en tiempo real.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contacto</title>
+      <link>http://localhost:1313/es/contact/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/contact/</guid>
+      <description>&lt;p&gt;Si quieres ponerte en contacto conmigo para colaborar, consultoría o simplemente charlar sobre tecnología, puedes escribirme directamente por correo o a través de LinkedIn.&lt;/p&gt;
+&lt;p&gt;📧 &lt;strong&gt;Email&lt;/strong&gt;: &lt;a href=&#34;mailto:alexdiaz17490@gmail.com&#34;&gt;alexdiaz17490@gmail.com&lt;/a&gt;&lt;br&gt;
+🔗 &lt;strong&gt;LinkedIn&lt;/strong&gt;: &lt;a href=&#34;https://www.linkedin.com/in/alejandro-dch/&#34;&gt;Alejandro Díaz Chamorro&lt;/a&gt;&lt;br&gt;
+🌍 &lt;strong&gt;Ubicación&lt;/strong&gt;: Pamplona (Navarra), España&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Próximamente integraré un formulario para facilitar el contacto directamente desde esta web. 🚀&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sobre mí</title>
+      <link>http://localhost:1313/es/about/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/about/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Alejandro Diaz&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/img/alex150.jpg&#34;&gt;
+¡Hola! 👋 Soy Alejandro Díaz, Ingeniero de Telecomunicación con más de 10 años de experiencia en el sector TIC.&lt;/p&gt;
+&lt;p&gt;Mi carrera ha evolucionado desde el diseño de redes y aplicaciones web, pasando por la gerencia técnica y de innovación, hasta la dirección técnica y comercial de equipos de desarrollo e integración con clientes de diferentes sectores. He liderado proyectos de I+D, desarrollado soluciones hardware y software propias, y participado en múltiples plataformas tecnológicas, tanto en entorno industrial como residencial.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

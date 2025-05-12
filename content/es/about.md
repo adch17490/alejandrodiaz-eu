@@ -4,7 +4,7 @@ date: 2025-03-25
 disableShare: true
 ShowSocialIcons: false
 ---
-
+![Alejandro Diaz](/img/alex150.jpg)
 ¡Hola! 👋 Soy Alejandro Díaz, Ingeniero de Telecomunicación con más de 10 años de experiencia en el sector TIC.
 
 Mi carrera ha evolucionado desde el diseño de redes y aplicaciones web, pasando por la gerencia técnica y de innovación, hasta la dirección técnica y comercial de equipos de desarrollo e integración con clientes de diferentes sectores. He liderado proyectos de I+D, desarrollado soluciones hardware y software propias, y participado en múltiples plataformas tecnológicas, tanto en entorno industrial como residencial.
