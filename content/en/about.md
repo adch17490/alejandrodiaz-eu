@@ -5,7 +5,7 @@ disableShare: true
 ShowSocialIcons: false
 ---
 
-![Alejandro Diaz](/img/alex150.jpg)
+![Alejandro Diaz](/img/alex_sf.png)
 Hello! 👋 I'm Alejandro Díaz, a Telecommunications Engineer with over 10 years of experience in the ICT sector.
 
 My career has evolved from network and web application design, through technical and innovation management, to the technical and commercial management of development and integration teams with clients from different sectors. I have led R&D projects, developed proprietary hardware and software solutions, and participated in multiple technology platforms, both in industrial and residential environments.
