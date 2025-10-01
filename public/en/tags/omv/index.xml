@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Omv on Alejandro Díaz&#39;s Portfolio</title>
+    <link>http://localhost:1313/en/tags/omv/</link>
+    <description>Recent content in Omv on Alejandro Díaz&#39;s Portfolio</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/omv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Home Server with Raspberry Pi 4, OMV and Microservices</title>
+      <link>http://localhost:1313/en/posts/home-server-raspberry-pi-4/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/posts/home-server-raspberry-pi-4/</guid>
+      <description>&lt;p&gt;For some time now, I&amp;rsquo;ve been running a small home server based on a &lt;strong&gt;Raspberry Pi 4&lt;/strong&gt;, which serves as &lt;strong&gt;storage hub, media center, and self-hosted services platform&lt;/strong&gt;. It&amp;rsquo;s a lightweight, silent, energy-efficient setup — and a fun one to manage 😄.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-system-base-raspberry-pi-4--openmediavault&#34;&gt;🧱 System base: Raspberry Pi 4 + OpenMediaVault&lt;/h2&gt;
+&lt;p&gt;I use a &lt;strong&gt;Raspberry Pi 4 with 4GB RAM&lt;/strong&gt;, connected to a &lt;strong&gt;1TB external USB hard drive&lt;/strong&gt; as the main storage.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

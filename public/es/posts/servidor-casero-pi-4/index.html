@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Mi servidor doméstico con Raspberry Pi 4, OMV y microservicios | Portfolio de Alejandro Díaz</title>
+<meta name="keywords" content="raspberry pi, omv, plex, mealie, kavita, frigate, microservicios">
+<meta name="description" content="Desde hace un tiempo tengo montado un servidor casero sobre una Raspberry Pi 4, que me sirve como nodo de almacenamiento, centro multimedia y plataforma de servicios personales. Es una solución ligera, silenciosa, eficiente y&hellip; divertida de mantener 😄.
+
+🧱 Base del sistema: Raspberry Pi 4 &#43; OpenMediaVault
+Uso una Raspberry Pi 4 con 4GB de RAM, a la que conecto un disco duro externo USB de 1TB como almacenamiento principal.">
+<meta name="author" content="Alejandro Díaz">
+<link rel="canonical" href="http://localhost:1313/es/posts/servidor-casero-pi-4/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="es" href="http://localhost:1313/es/posts/servidor-casero-pi-4/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/es/" accesskey="h" title="Portfolio de Alejandro Díaz (Alt + H)">Portfolio de Alejandro Díaz</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="http://localhost:1313/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/es/about/" title="Sobre mí">
+                    <span>Sobre mí</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/es/projects/" title="Proyectos">
+                    <span>Proyectos</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/es/contact/" title="Contacto">
+                    <span>Contacto</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/es/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/es/">Inicio</a>&nbsp;»&nbsp;<a href="http://localhost:1313/es/posts/">Blog Técnico</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Mi servidor doméstico con Raspberry Pi 4, OMV y microservicios
+    </h1>
+    <div class="post-meta"><span title='2025-10-01 00:00:00 +0000 UTC'>octubre 1, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Alejandro Díaz
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Tabla de Contenidos</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#-base-del-sistema-raspberry-pi-4--openmediavault" aria-label="🧱 Base del sistema: Raspberry Pi 4 &#43; OpenMediaVault">🧱 Base del sistema: Raspberry Pi 4 + OpenMediaVault</a></li>
+                <li>
+                    <a href="#-microservicios-desplegados" aria-label="🧩 Microservicios desplegados">🧩 Microservicios desplegados</a><ul>
+                        
+                <li>
+                    <a href="#-plex-media-server" aria-label="🎬 Plex Media Server">🎬 Plex Media Server</a></li>
+                <li>
+                    <a href="#-mealie" aria-label="🍽️ Mealie">🍽️ Mealie</a></li>
+                <li>
+                    <a href="#-kavita" aria-label="📚 Kavita">📚 Kavita</a></li></ul>
+                </li>
+                <li>
+                    <a href="#-y-frigate" aria-label="📷 ¿Y Frigate?">📷 ¿Y Frigate?</a></li>
+                <li>
+                    <a href="#-limitaciones-y-pr%c3%b3ximos-pasos" aria-label="🚧 Limitaciones y próximos pasos">🚧 Limitaciones y próximos pasos</a></li>
+                <li>
+                    <a href="#-conclusi%c3%b3n" aria-label="💡 Conclusión">💡 Conclusión</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Desde hace un tiempo tengo montado un servidor casero sobre una <strong>Raspberry Pi 4</strong>, que me sirve como <strong>nodo de almacenamiento, centro multimedia y plataforma de servicios personales</strong>. Es una solución ligera, silenciosa, eficiente y&hellip; divertida de mantener 😄.</p>
+<hr>
+<h2 id="-base-del-sistema-raspberry-pi-4--openmediavault">🧱 Base del sistema: Raspberry Pi 4 + OpenMediaVault<a hidden class="anchor" aria-hidden="true" href="#-base-del-sistema-raspberry-pi-4--openmediavault">#</a></h2>
+<p>Uso una <strong>Raspberry Pi 4 con 4GB de RAM</strong>, a la que conecto un <strong>disco duro externo USB de 1TB</strong> como almacenamiento principal.</p>
+<p>Sobre ella tengo instalado <strong><a href="https://www.openmediavault.org/">OpenMediaVault (OMV)</a></strong>, una distro ligera y perfecta para NAS personales. Me permite:</p>
+<ul>
+<li>Gestionar fácilmente el almacenamiento</li>
+<li>Configurar carpetas compartidas vía Samba</li>
+<li>Controlar permisos</li>
+<li>Y lanzar contenedores Docker sin complicarme</li>
+</ul>
+<p>Todo accesible por web, estable y con consumo energético mínimo.</p>
+<hr>
+<h2 id="-microservicios-desplegados">🧩 Microservicios desplegados<a hidden class="anchor" aria-hidden="true" href="#-microservicios-desplegados">#</a></h2>
+<p>Gracias a Docker y Portainer, tengo corriendo varios contenedores útiles:</p>
+<h3 id="-plex-media-server">🎬 Plex Media Server<a hidden class="anchor" aria-hidden="true" href="#-plex-media-server">#</a></h3>
+<p>Mi centro multimedia principal. Reproduce sin problemas contenido local desde el disco duro y lo sirvo en red a mi Fire Stick, móvil, y portátil. No tengo transcodificación activa (limita mucho en Pi), pero funciona perfectamente con archivos compatibles.</p>
+<h3 id="-mealie">🍽️ Mealie<a hidden class="anchor" aria-hidden="true" href="#-mealie">#</a></h3>
+<p>Una app genial para <strong>gestionar recetas</strong>, listas de la compra y planificaciones de comidas. La uso para organizar mis comidas semanales y compartir el menú en casa desde el móvil.</p>
+<h3 id="-kavita">📚 Kavita<a hidden class="anchor" aria-hidden="true" href="#-kavita">#</a></h3>
+<p>Una herramienta ligera para <strong>leer cómics, libros y mangas</strong> desde red local. Su interfaz es limpia, rápida, y me permite tener mi biblioteca bien organizada y accesible desde cualquier dispositivo.</p>
+<hr>
+<h2 id="-y-frigate">📷 ¿Y Frigate?<a hidden class="anchor" aria-hidden="true" href="#-y-frigate">#</a></h2>
+<p>Intenté montar <strong>Frigate</strong>, una solución potente para <strong>detección de movimiento y objetos con cámaras IP</strong>, que funciona con inteligencia artificial y procesamiento por TensorFlow.</p>
+<p>El problema: la <strong>Raspberry Pi 4 no tiene GPU ni potencia suficiente</strong> para manejarlo en condiciones. Frigate requiere aceleración por hardware (tipo Coral USB, GPU externa o Jetson), y ahí mi setup se queda corto.</p>
+<hr>
+<h2 id="-limitaciones-y-próximos-pasos">🚧 Limitaciones y próximos pasos<a hidden class="anchor" aria-hidden="true" href="#-limitaciones-y-próximos-pasos">#</a></h2>
+<ul>
+<li><strong>No puedo hacer transcodificación en Plex</strong>, pero sí reproducción directa.</li>
+<li>Frigate lo he desactivado por ahora hasta tener hardware específico para visión por IA.</li>
+<li>Todo corre con cuidado de no saturar la RAM o temperatura. La Pi está en una carcasa con ventilador activo.</li>
+</ul>
+<hr>
+<h2 id="-conclusión">💡 Conclusión<a hidden class="anchor" aria-hidden="true" href="#-conclusión">#</a></h2>
+<p>Este servidor doméstico me da todo lo que necesito en mi día a día digital: multimedia, organización, lectura, y almacenamiento. Es modular, silencioso, y económico.</p>
+<p>Si estás pensando en montarte uno parecido, la Pi 4 con OMV y Docker sigue siendo una opción excelente.</p>
+<hr>
+<p>📩 ¿Usas algo similar? ¿Tienes una Coral USB para Frigate que te funcione bien?<br>
+Cuéntamelo en <a href="https://www.linkedin.com/in/alejandro-dch/">LinkedIn</a> o escríbeme por <a href="mailto:alexdiaz17490@gmail.com">email</a>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/es/tags/raspberry-pi/">Raspberry Pi</a></li>
+      <li><a href="http://localhost:1313/es/tags/omv/">Omv</a></li>
+      <li><a href="http://localhost:1313/es/tags/plex/">Plex</a></li>
+      <li><a href="http://localhost:1313/es/tags/mealie/">Mealie</a></li>
+      <li><a href="http://localhost:1313/es/tags/kavita/">Kavita</a></li>
+      <li><a href="http://localhost:1313/es/tags/frigate/">Frigate</a></li>
+      <li><a href="http://localhost:1313/es/tags/microservicios/">Microservicios</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/es/posts/como-controlo-mi-casa-con-home-assistant/">
+    <span class="title">Siguiente »</span>
+    <br>
+    <span>Cómo controlo mi casa con Home Assistant</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/es/">Portfolio de Alejandro Díaz</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copiar';
+
+        function copyingDone() {
+            copybutton.innerHTML = '¡copiado!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copiar';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

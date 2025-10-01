@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/es/</loc>
-    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/es/posts/</loc>
-    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -26,6 +26,43 @@
                 rel="alternate"
                 hreflang="es-es"
                 href="http://localhost:1313/es/posts/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/tags/frigate/</loc>
+    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/kavita/</loc>
+    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/mealie/</loc>
+    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/posts/servidor-casero-pi-4/</loc>
+    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/microservicios/</loc>
+    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/omv/</loc>
+    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/plex/</loc>
+    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/raspberry-pi/</loc>
+    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/</loc>
+    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/tags/"
                 />
   </url><url>
     <loc>http://localhost:1313/es/posts/como-controlo-mi-casa-con-home-assistant/</loc>
@@ -97,19 +134,6 @@
                 rel="alternate"
                 hreflang="es-es"
                 href="http://localhost:1313/es/about/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/tags/</loc>
-    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="http://localhost:1313/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="http://localhost:1313/es/tags/"
                 />
   </url><url>
     <loc>http://localhost:1313/es/tags/zigbee/</loc>
