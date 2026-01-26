@@ -7,6 +7,13 @@ Here is a selection of some projects I have participated in or led, within the f
 
 ---
 
+### 🚗 Pamplona Low Emission Zone (LEZ)
+
+Integration and development of a platform that collects data from vehicles, parking spaces, and air quality sensors, and communicates with the Spanish Traffic Authority (DGT) for data exchange and processing.  
+**Technologies:** FIWARE, MQTT, LoRaWAN, Node-RED, InfluxDB, Grafana.
+
+---
+
 ### 💡 Monitoring platform for public housing (FIWARE)
 
 Development of a FIWARE-based solution for visualizing consumption and facility status in social rental housing.

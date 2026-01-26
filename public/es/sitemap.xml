@@ -30,12 +30,42 @@
   </url><url>
     <loc>http://localhost:1313/es/tags/frigate/</loc>
     <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/frigate/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/tags/frigate/"
+                />
   </url><url>
     <loc>http://localhost:1313/es/tags/kavita/</loc>
     <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/kavita/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/tags/kavita/"
+                />
   </url><url>
     <loc>http://localhost:1313/es/tags/mealie/</loc>
     <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/mealie/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/tags/mealie/"
+                />
   </url><url>
     <loc>http://localhost:1313/es/posts/servidor-casero-pi-4/</loc>
     <lastmod>2025-10-01T00:00:00+00:00</lastmod>
@@ -45,12 +75,42 @@
   </url><url>
     <loc>http://localhost:1313/es/tags/omv/</loc>
     <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/omv/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/tags/omv/"
+                />
   </url><url>
     <loc>http://localhost:1313/es/tags/plex/</loc>
     <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/plex/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/tags/plex/"
+                />
   </url><url>
     <loc>http://localhost:1313/es/tags/raspberry-pi/</loc>
     <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/raspberry-pi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/tags/raspberry-pi/"
+                />
   </url><url>
     <loc>http://localhost:1313/es/tags/</loc>
     <lastmod>2025-10-01T00:00:00+00:00</lastmod>

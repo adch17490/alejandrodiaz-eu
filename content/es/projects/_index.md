@@ -7,6 +7,13 @@ Aquí tienes una selección de algunos proyectos en los que he participado o lid
 
 ---
 
+### 🚗 Zona de Bajas Emisiones de Pamplona (ZBE)
+
+Integración y desarrollo de plataforma que recopila datos de vehículos, de plazas de aparcamiento y de sensores de calidad de aire; y se comunica con DGT para el envío y tratamiento de la información.
+**Tecnologías:** FIWARE, MQTT, LoRaWAN, Node-RED, InfluxDB, Grafana.
+
+---
+
 ### 💡 Plataforma de monitorización para viviendas públicas (FIWARE)
 
 Desarrollo de una solución basada en FIWARE para la visualización de consumos y estado de instalaciones en viviendas de alquiler social.  
