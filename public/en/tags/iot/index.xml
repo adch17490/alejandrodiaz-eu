@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Iot on Alejandro Díaz&#39;s Portfolio</title>
+    <link>http://localhost:1313/en/tags/iot/</link>
+    <description>Recent content in Iot on Alejandro Díaz&#39;s Portfolio</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Communication Protocols in BMS and Industrial Integration</title>
+      <link>http://localhost:1313/en/posts/bms-industrial-communication-protocols/</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/posts/bms-industrial-communication-protocols/</guid>
+      <description>&lt;p&gt;Throughout my professional career, I’ve worked on projects where integration between devices, sensors and platforms is key. In this context, understanding and mastering the main &lt;strong&gt;communication protocols&lt;/strong&gt; in the market is essential to ensure compatibility, scalability and performance.&lt;/p&gt;
+&lt;p&gt;Here’s a summary of the most relevant ones in building automation (BMS), industry and smart control:&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-modbus&#34;&gt;🔌 Modbus&lt;/h3&gt;
+&lt;p&gt;One of the most widespread protocols in industrial automation. Simple, robust and well supported. I’ve worked with &lt;strong&gt;Modbus RTU&lt;/strong&gt; over RS485 and &lt;strong&gt;Modbus TCP&lt;/strong&gt; over IP networks for HVAC, energy and lighting control systems.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

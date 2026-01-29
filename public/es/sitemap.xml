@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/es/tags/automatizaci%C3%B3n/</loc>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/es/</loc>
-    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -16,7 +19,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/es/posts/</loc>
-    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
@@ -26,6 +29,80 @@
                 rel="alternate"
                 hreflang="es-es"
                 href="http://localhost:1313/es/posts/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/tags/bms/</loc>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/bms/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/tags/bms/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/tags/comunicaciones/</loc>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/modbus/</loc>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/modbus/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/tags/modbus/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/tags/mqtt/</loc>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/mqtt/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/tags/mqtt/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/tags/protocolos/</loc>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/posts/protocolos-comunicacion/</loc>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/es/tags/</loc>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/tags/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/es/tags/zigbee/</loc>
+    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="http://localhost:1313/en/tags/zigbee/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-es"
+                href="http://localhost:1313/es/tags/zigbee/"
                 />
   </url><url>
     <loc>http://localhost:1313/es/tags/frigate/</loc>
@@ -112,19 +189,6 @@
                 href="http://localhost:1313/es/tags/raspberry-pi/"
                 />
   </url><url>
-    <loc>http://localhost:1313/es/tags/</loc>
-    <lastmod>2025-10-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="http://localhost:1313/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="http://localhost:1313/es/tags/"
-                />
-  </url><url>
     <loc>http://localhost:1313/es/posts/como-controlo-mi-casa-con-home-assistant/</loc>
     <lastmod>2025-03-25T00:00:00+00:00</lastmod>
   </url><url>
@@ -194,19 +258,6 @@
                 rel="alternate"
                 hreflang="es-es"
                 href="http://localhost:1313/es/about/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/es/tags/zigbee/</loc>
-    <lastmod>2025-03-25T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="http://localhost:1313/en/tags/zigbee/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-es"
-                href="http://localhost:1313/es/tags/zigbee/"
                 />
   </url><url>
     <loc>http://localhost:1313/es/categories/</loc>

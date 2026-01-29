@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Communication Protocols in BMS and Industrial Integration | Alejandro Díaz&#39;s Portfolio</title>
+<meta name="keywords" content="protocols, bms, iot, automation, modbus, mqtt, zigbee">
+<meta name="description" content="Throughout my professional career, I’ve worked on projects where integration between devices, sensors and platforms is key. In this context, understanding and mastering the main communication protocols in the market is essential to ensure compatibility, scalability and performance.
+Here’s a summary of the most relevant ones in building automation (BMS), industry and smart control:
+
+🔌 Modbus
+One of the most widespread protocols in industrial automation. Simple, robust and well supported. I’ve worked with Modbus RTU over RS485 and Modbus TCP over IP networks for HVAC, energy and lighting control systems.">
+<meta name="author" content="Alejandro Díaz">
+<link rel="canonical" href="http://localhost:1313/en/posts/bms-industrial-communication-protocols/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/en/posts/bms-industrial-communication-protocols/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/en/" accesskey="h" title="Alejandro Díaz&#39;s Portfolio (Alt + H)">Alejandro Díaz&#39;s Portfolio</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="http://localhost:1313/es/" title="Español"
+                            aria-label="Español">Es</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/en/about/" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/en/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/en/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/en/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/en/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/en/posts/">Technical Blog</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Communication Protocols in BMS and Industrial Integration
+    </h1>
+    <div class="post-meta"><span title='2026-01-29 00:00:00 +0000 UTC'>January 29, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Alejandro Díaz
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul><ul>
+                <li>
+                    <a href="#-modbus" aria-label="🔌 Modbus">🔌 Modbus</a></li>
+                <li>
+                    <a href="#-bacnet" aria-label="🏢 BACnet">🏢 BACnet</a></li>
+                <li>
+                    <a href="#-m-bus" aria-label="🔄 M-Bus">🔄 M-Bus</a></li>
+                <li>
+                    <a href="#-opc-ua" aria-label="🌐 OPC-UA">🌐 OPC-UA</a></li>
+                <li>
+                    <a href="#-dali" aria-label="💡 DALI">💡 DALI</a></li>
+                <li>
+                    <a href="#-zigbee-and-z-wave" aria-label="📶 Zigbee and Z-Wave">📶 Zigbee and Z-Wave</a></li>
+                <li>
+                    <a href="#-mqtt" aria-label="☁️ MQTT">☁️ MQTT</a></li>
+                <li>
+                    <a href="#-other-protocols-ive-worked-with" aria-label="🔧 Other protocols I’ve worked with:">🔧 Other protocols I’ve worked with:</a></li></ul>
+                    
+                <li>
+                    <a href="#-conclusion" aria-label="🎯 Conclusion">🎯 Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Throughout my professional career, I’ve worked on projects where integration between devices, sensors and platforms is key. In this context, understanding and mastering the main <strong>communication protocols</strong> in the market is essential to ensure compatibility, scalability and performance.</p>
+<p>Here’s a summary of the most relevant ones in building automation (BMS), industry and smart control:</p>
+<hr>
+<h3 id="-modbus">🔌 Modbus<a hidden class="anchor" aria-hidden="true" href="#-modbus">#</a></h3>
+<p>One of the most widespread protocols in industrial automation. Simple, robust and well supported. I’ve worked with <strong>Modbus RTU</strong> over RS485 and <strong>Modbus TCP</strong> over IP networks for HVAC, energy and lighting control systems.</p>
+<hr>
+<h3 id="-bacnet">🏢 BACnet<a hidden class="anchor" aria-hidden="true" href="#-bacnet">#</a></h3>
+<p>A standard protocol in BMS environments. I’ve used it in HVAC and air quality systems. Enables structured communication between devices from different manufacturers.</p>
+<hr>
+<h3 id="-m-bus">🔄 M-Bus<a hidden class="anchor" aria-hidden="true" href="#-m-bus">#</a></h3>
+<p>Used for remote reading of utility meters (water, gas, electricity). I’ve integrated it into residential buildings and centralized consumption platforms.</p>
+<hr>
+<h3 id="-opc-ua">🌐 OPC-UA<a hidden class="anchor" aria-hidden="true" href="#-opc-ua">#</a></h3>
+<p>A powerful and modern industrial protocol. Object-oriented and secure, ideal for Industry 4.0 and SCADA integration.</p>
+<hr>
+<h3 id="-dali">💡 DALI<a hidden class="anchor" aria-hidden="true" href="#-dali">#</a></h3>
+<p>Digital lighting control protocol. I’ve implemented DALI in energy-efficiency solutions for office buildings and public spaces.</p>
+<hr>
+<h3 id="-zigbee-and-z-wave">📶 Zigbee and Z-Wave<a hidden class="anchor" aria-hidden="true" href="#-zigbee-and-z-wave">#</a></h3>
+<p>Wireless protocols used mainly in home automation: sensors, lighting, blinds, etc. Easy to integrate into platforms like Home Assistant.</p>
+<hr>
+<h3 id="-mqtt">☁️ MQTT<a hidden class="anchor" aria-hidden="true" href="#-mqtt">#</a></h3>
+<p>Lightweight and reliable for IoT communications. I’ve used MQTT in both home and industrial setups, connected to brokers like Mosquitto and platforms such as Node-RED and FIWARE.</p>
+<hr>
+<h3 id="-other-protocols-ive-worked-with">🔧 Other protocols I’ve worked with:<a hidden class="anchor" aria-hidden="true" href="#-other-protocols-ive-worked-with">#</a></h3>
+<ul>
+<li><strong>KNX</strong>: European standard for smart buildings</li>
+<li><strong>LoRaWAN</strong>: long-range, low-power communications</li>
+<li><strong>REST / JSON / WebSocket</strong>: for cloud and API integrations</li>
+<li><strong>SNMP</strong>: for network and infrastructure monitoring</li>
+<li><strong>LonWorks</strong>: used in legacy BMS installations</li>
+</ul>
+<hr>
+<h2 id="-conclusion">🎯 Conclusion<a hidden class="anchor" aria-hidden="true" href="#-conclusion">#</a></h2>
+<p>Each protocol has its own scope and strengths. The key is to select the right one for each environment and know how to <strong>combine them efficiently</strong>.</p>
+<p>I’ve designed architectures where several of these protocols coexist, always focusing on reliability, interoperability, and long-term scalability.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/en/tags/protocols/">Protocols</a></li>
+      <li><a href="http://localhost:1313/en/tags/bms/">Bms</a></li>
+      <li><a href="http://localhost:1313/en/tags/iot/">Iot</a></li>
+      <li><a href="http://localhost:1313/en/tags/automation/">Automation</a></li>
+      <li><a href="http://localhost:1313/en/tags/modbus/">Modbus</a></li>
+      <li><a href="http://localhost:1313/en/tags/mqtt/">Mqtt</a></li>
+      <li><a href="http://localhost:1313/en/tags/zigbee/">Zigbee</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/en/posts/home-server-raspberry-pi-4/">
+    <span class="title">Next »</span>
+    <br>
+    <span>My Home Server with Raspberry Pi 4, OMV and Microservices</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/en/">Alejandro Díaz&#39;s Portfolio</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

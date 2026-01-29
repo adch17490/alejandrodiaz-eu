@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Modbus on Portfolio de Alejandro Díaz</title>
+    <link>http://localhost:1313/es/tags/modbus/</link>
+    <description>Recent content in Modbus on Portfolio de Alejandro Díaz</description>
+    <generator>Hugo -- 0.145.0</generator>
+    <language>es-es</language>
+    <lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/es/tags/modbus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Protocolos de comunicación en BMS e integración industrial</title>
+      <link>http://localhost:1313/es/posts/protocolos-comunicacion/</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/es/posts/protocolos-comunicacion/</guid>
+      <description>&lt;p&gt;A lo largo de mi carrera profesional, he trabajado en proyectos donde la integración entre equipos, sensores y plataformas es esencial. En este contexto, conocer y dominar los principales &lt;strong&gt;protocolos de comunicación&lt;/strong&gt; del mercado resulta clave para garantizar compatibilidad, escalabilidad y eficiencia.&lt;/p&gt;
+&lt;p&gt;Aquí resumo algunos de los más relevantes en el ámbito de la automatización de edificios (BMS), industria y control inteligente:&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-modbus&#34;&gt;🔌 Modbus&lt;/h3&gt;
+&lt;p&gt;Uno de los protocolos más extendidos en la industria. Sencillo, robusto y ampliamente soportado. He trabajado tanto con &lt;strong&gt;Modbus RTU&lt;/strong&gt; sobre RS485 como con &lt;strong&gt;Modbus TCP&lt;/strong&gt; en entornos IP, especialmente para control de climatización, energía o iluminación.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
